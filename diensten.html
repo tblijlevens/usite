@@ -1,0 +1,231 @@
+<!--
+Author & productowner: Teun Blijlevens, Umanise.
+Date:
+Contact: mail@umanise.nl
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Umanise - Diensten</title>
+	</head>
+
+<body>
+<div id="header">
+		<div id="hwrapper">
+			<div id="logo"><a href="index.html"><img src="images/umaniselogo.png" id="ulogo" height="100%"></a></div>
+			<div id="menuwrapper">
+				<a href="index.html"><div id="index" class="menu">Home</div></a>
+				<a href="diensten.html"><div id="diensten" class="menu">Diensten</div></a>
+				<a href="portfolio.html"><div id="portfolio" class="menu">Portfolio</div></a>
+				<a href="contact.html"><div id="contact" class="menu">Contact</div></a>
+			</div>
+		</div>
+</div>
+
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       CONTENT STARTS HERE             /////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+<div id="content">
+	<div id="popup" >hoi</div>
+	<div id="summary">
+		<h2>Alle diensten op een rijtje</h2>
+		<div id="usco" class="col1">
+			<input type="checkbox" id="usco1" class="css-checkbox" title="Filter" checked><label for="usco1"><b>Usability en conversie</b></label>
+			<ul class="summary">
+				<li><a href="#expertreview" onclick="expand('expertreview', 1000)">Expert review</a></li>
+				<li><a href="#abtest" onclick="expand('abtest', 1000)">A/B testen</a></li>
+				<li><a href="#observatieonderzoek" onclick="expand('observatieonderzoek', 1000)">Observatieonderzoek</a></li>
+				<li><a href="#paperprototyping" onclick="expand('paperprototyping', 1000)">Paper prototyping</a></li>
+			</ul>
+		</div>
+		<div id="usre" class="col2">
+			<input type="checkbox" id="usre1" class="css-checkbox" title="Filter" checked><label for="usre1"><b>User research</b></label>
+			<ul class="summary">
+				<li><a href="#enquetes" onclick="expand('enquetes', 1000)">Enqu&ecirc;tes</a></li>
+				<li><a href="#interviews" onclick="expand('interviews', 1000)">Interviews</a></li>
+				<li><a href="#focusgroups" onclick="expand('focusgroups', 1000)">Focus groups</a></li>
+				<li><a href="#cardsorting" onclick="expand('cardsorting', 1000)">Card sorting</a></li>
+			</ul>
+		</div>
+		<div id="dev" class="col3">
+			<input type="checkbox" id="dev1" class="css-checkbox" title="Filter" checked><label for="dev1" class="devlabel"><b>Development</b></label>
+			<ul class="summary">
+				<li><a href="#demo" onclick="expand('demo', 1000)">Online demo's</a></li>
+				<li><a href="#webapp" onclick="expand('webapp', 1000)">Webapp ontwikkeling</a></li>
+			</ul>
+		</div>
+	</div>
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       BOXES START HERE            	///////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+	<div class="box usco1 flow-text" id="expertreview">	<div class="hidden"> <!-- only shows part of the text unless expanded, see css ''.hidden' and function 'expand'-->
+		<div id="dienstenimg"><img src="images/exreplaatje.jpg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('expertreview'); smoothAnchor('expertreview');">Expert Review</h2>
+		U heeft een product of prototype en heeft behoefte om snel te weten te komen hoe het zit met het <b>gebruiksgemak</b> en de gebruikservaring ervan. Denk aan de navigatie van uw website, of de overzichtelijkheid van uw app. Ik voer een analyse op uw product uit, waarbij ik mij verplaats in uw doelgroep en de laatste  <span id="hoverpopup" onmouseover="hoverdiv(event, 'Gebruiksvriendelijkheid is een concept dat onder andere door ergonomen wordt bestudeerd. Iets is gebruik(er)svriendelijk wanneer...<br><i>Bron: <a href=\'https://nl.wikipedia.org/wiki/usability\' target=\'_blank\'>Wikipedia</a>.')" onmouseout="hoverdivout()">usability</span> inzichten in acht houdt.
+		<h5>Wat heb ik er aan?</h5>
+		In korte tijd ontvangt u een rapport met goede punten en verbeterpunten aan uw product op het gebied van gebruiksvriendelijkheid. Daarbij wordt per verbeterpunt concreet oplossingsgericht advies gegeven, waarmee u uw product gemakkelijk gebruiksvriendelijker kunt maken.</div>
+		<span class="leesmeer" onclick="expand('expertreview'); smoothAnchor('expertreview');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usco1" id="abtest"><div class="hidden">
+		<div id="dienstenimg"><img src="images/abplaatje.png" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('abtest'); smoothAnchor('abtest');">A/B testen</h2>
+		Help! Moet die knop <b>rood of groen</b>? Moet hij in het midden staan of links uitgelijnd? Soms is het erg lastig dit soort keuzes te maken. En terecht: de plaatsing of kleur van een enkel element op uw site of app kan een enorm verschil maken in de verkoopcijfers of het aantal mensen die zich inschrijven op een nieuwsbrief. Zie hier een voorbeeld van <a href="https://unbounce.com/a-b-testing/shocking-results/" target="_blank" title="Opent in een nieuwe tab" alt="Opent in een nieuwe tab">12 verrassende A/B-test resultaten</a> (opent in een nieuwe tab).
+		<h5>Wat is A/B testen?</h5>
+		<span id="hoverpopup" onmouseover="hoverdiv(event, 'In de praktijk wordt de A/B-test onder meer gebruikt bij de optimalisatie van conversie op websites, binnen e-nieuwsbrieven, bij advertenties en binnen de direct marketing...<br><i>Bron: <a href=\'https://nl.wikipedia.org/wiki/A/B-test\' target=\'_blank\'>Wikipedia</a>.')" onmouseout="hoverdivout()">A/B-testen</span> is bij uitstek de methode om de conversie van uw website of app te optimaliseren. De conversie is het omzetten van bezoekers naar klanten. En daarmee bedoel ik klanten in de brede zin: de bezoeker gaat over tot een actie die u wilt dat hij uitvoert, zoals iets kopen, inschrijven, aanmelden, iets downloaden, etc. Kortom elke actie die een stap verder gaat dan alleen surfen. Met een A/B-test wordt getest welke van twee varianten van dezelfde pagina het best presteert. De A variant heeft bijvoorbeeld een rode 'Inschrijven' knop, bij variant B is die groen. Al uw website bezoekers worden op de achtergrond automatisch verdeeld over de twee varianten. Tegelijkertijd wordt de <span id="hoverpopup" onmouseover="hoverdiv(event, 'Conversie binnen de e-commerce is de omzetting van bezoek aan een website naar een bepaald conversiedoel, doorgaans uitgedrukt als een percentage van de sitebezoekers dat overgaat tot het conversiedoel...<br><i>Bron: <a href=\'https://nl.wikipedia.org/wiki/Conversion rate\' target=\'_blank\'>Wikipedia</a>.')" onmouseout="hoverdivout()">conversion rate</span> gemeten: hoeveel procent van de pagina-bezoekers klikt op de knop? Nu kunt u een juiste en gefundeerde keuze maken.
+		In een iteratief proces waarbij opeenvolgend kleine aanpassingen worden getest kunt u op deze manier de <b>conversion rate aanzienlijk verhogen</b>.
+
+		<h5>Maar welke varianten testen we dan?</h5>
+		Links, rechts of midden? Groen, rood, geel of blauw? En als blijkt dat die groene knop een hogere conversie heeft, hoe dan verder? Daar help ik u graag bij. Allereest zal ik mijzelf verplaatsen in een gebruiker uit uw doelgroep en werp ik een kritische blik op uw website. Daarnaast zal ik naar uw website statistieken kijken: waar haken bezoekers af, hoe navigeren zij door uw site? Met al deze inzichten stel ik hypotheses over welke kleine aanpassingen een groot verschil kunnen maken. Natuurlijk hoeft u mij niet te geloven: we testen die hypotheses met A/B-testen, zodat u wordt <b>overtuigd door de cijfers</b>.
+		</div>
+		<span class="leesmeer" onclick="expand('abtest'); smoothAnchor('abtest');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usco1" id="observatieonderzoek"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_obsoz2.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('observatieonderzoek'); smoothAnchor('observatieonderzoek');">Observatieonderzoek</h2>
+		U heeft een werkend prototype van bijvoorbeeld een website, of een bestaande website die toe is aan vernieuwing. Met behulp van observatieonderzoek beantwoordt Umanise o.a. de volgende vragen:
+		<ul>
+		  <li>Welke aspecten van uw product zijn goed en moeten er vooral in blijven?</li>
+		  <li>Tegen welke problemen lopen gebruikers aan bij het gebruik van uw product?</li>
+		  <li>Hoe moet dat verbeterd worden?</li>
+		</ul>
+
+		<h5>Hoe dan?</h5>
+		Door een kleine groep gebruikers uit uw doelgroep te <b>observeren</b> tijdens het gebruik van uw product kunnen we goed zien welke aspecten goed werken en welke niet. Elke onderzoeksdeelnemer wordt achteraf ge&iuml;nterviewd. Hierin wordt ingegegaan op dingen die zijn opgevallen in de interactie. Ook wordt uw doelgroep hier gevraagd hoe zij denken dat het beter kan. Alles wordt gefilmd, zodat de sessie uitgebreid geanalyseerd kan worden. Daarnaast geeft het altijd fantastisch illustratief beeldmateriaal, waardoor u wordt <b>overtuigd door de acties van uw gebruikers</b>. Uiteraard ontvangt u een concreet, oplossingsgericht adviesrapport, waardoor het verbeteren van uw product een eitje wordt.
+		</div>
+		<span class="leesmeer" onclick="expand('observatieonderzoek'); smoothAnchor('observatieonderzoek');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usco1" id="paperprototyping"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_obsoz2.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('paperprototyping'); smoothAnchor('paperprototyping');">Paper prototyping</h2>
+		Heeft u nog geen werkend prototype of bestaand product, maar wilt u wel weten of uw ideeën een duidelijke navigatiestructuur bieden voor uw doelgroep? Dan kan <b>paper prototyping</b> de oplossing bieden. Met behulp van paper prototyping is het mogelijk om al	in het beginstadium van de ontwikkeling van bijvoorbeeld een website of applicatie het functioneel design te testen bij de gebruikers.
+
+		<h5>Hoe dan?</h5>
+		We beginnen met uw idee van de designs van elke pagina te <b>schetsen</b>. Dit hoeft helemaal niet mooi en keurig, gewoon zwart-wit, gewoon met &eacute;&eacute;n pen is voldoende. Juist doordat het er zo onaf uitziet, als een product in ontwikkeling, durven gebruikers kritiek te uiten en kom je tot verbeterpunten. Elke pagina wordt uitgeknipt, zodat ze mooi op elkaar gelegd kunnen worden. Vervolgens wordt gebruikers uit uw doelgroep gevraagd bepaalde informatie te vinden of een taak uit te voeren. Elke keer dat een gebruiker ergens op klikt wordt het juiste papiertje vooraan gelegd. De sessie wordt structureel geobserveerd en opgenomen. Achteraf wordt de onderzoeksdeelnemer ge&iuml;nterviewd. Naast het <b>testen van de hoofdnavigatie</b> van uw product krijgt u zo ook <b>ideeën uit uw doelgroep</b> over hoe zij uw product graag zouden zien.
+		</div>
+		<span class="leesmeer" onclick="expand('paperprototyping'); smoothAnchor('paperprototyping');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usre1" id="enquetes"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_enquete.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('enquetes'); smoothAnchor('enquetes');">Enqu&ecirc;tes</h2>
+				<ul>
+					<li>Welke informatie vinden de gebruikers van mijn website belangrijk?</li>
+					<li>Welk ontwerp van de homepagina vindt mijn doelgroep het mooist?</li>
+					<li>Welk cijfer geeft mijn doelgroep aan het gebruiksgemak?</li>
+					<li>Hoe tevreden is mijn doelgroep over het administratiesysteem?</li>
+				</ul>
+				Met behulp van online enqu&#234;tes onderzoek ik voor u deze vragen. U krijgt zo snel inzicht in kenmerken van uw doelgroep of specifieke antoorden op vragen over uw product.
+		</div>
+		<span class="leesmeer" onclick="expand('enquetes'); smoothAnchor('enquetes');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usre1" id="interviews"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_interview.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('interviews'); smoothAnchor('interviews');">Interviews</h2>
+		Met <a href="#enquetes" onclick="expand('enquetes', 1000)">Enqu&ecirc;tes</a> krijgt u snel inzicht in specifieke vragen van of over uw doelgroep. Met interviews kunnen we verder ingaan op de behoeften van gebruikers uit uw doelgroep.
+				<ul>
+					<li>Hoe wordt bijvoorbeeld de navigatie ervaren?</li>
+					<li>Wat werkt er niet goed aan?</li>
+					<li>Hoe kan dat beter?</li>
+				</ul>
+		Met de juiste vragen en vooral ook de juiste doorvragen kom ik tot dieper inzicht in waarom gebruikers doen wat ze doen of willen wat ze willen. Daarnaast is het een goede mogelijkheid om de gebruiker te laten nadenken en ideeën te laten genereren hoe u hem of haar beter kan bedienen via uw product.
+		</div>
+		<span class="leesmeer" onclick="expand('interviews'); smoothAnchor('interviews');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usre1" id="focusgroups"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_cardsorting.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('focusgroups'); smoothAnchor('focusgroups');">Focus groups</h2>
+		Het is ook mogelijk om <b>groepsdiscussies</b> te voeren in de vorm van focusgroups (ook wel paneldiscussies genoemd). In een focusgroup discussi&#235;ren 6 tot 10
+		mensen die iets met uw product te maken hebben. Dit zijn gebruikers, maar bijvoorbeeld ook experts uit relevante vakgebieden of uzelf. Dit is een goede kans voor het
+		verkrijgen van <b>diepgaande informatie</b> en het <b>genereren van creatieve oplossingen</b>. Bovendien kunt u zo zelf in contact komen met uw doelgroep en een beter
+		begrip krijgen van hun wensen. Umanise organiseert deze focusgroups met een goed voorbereid programma en een gespreksleider. Een dergelijke panel-discussie belooft vaak een
+		erg leuke middag op te leveren waarbij een helder beeld wordt verkregen van de visie van uw doelgroep. Daarnaast levert het veel inspiratie op voor u en uw ontwerpers bij
+		de ontwikkeling van uw product.
+		</div>
+		<span class="leesmeer" onclick="expand('focusgroups'); smoothAnchor('focusgroups');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box usre1" id="cardsorting"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_cardsorting2.svg" width="100%"></div>
+		<h2 class="headerclick" onclick="expand('cardsorting'); smoothAnchor('cardsorting');">Card sorting</h2>
+		Met card sorting kom je erachter hoe gebruikers informatie verwachten te vinden en welke terminologie zij logisch vinden voor 'soorten' van informatie. Hiermee krijg je een veel beter beeld hoe je informatie op je site of app moet groeperen en hoe de navigatie in elkaar moet zitten.
+		<h5>Hoe dan?</h5>
+		Van tevoren worden kaartjes beschreven met stukjes content of functionaliteiten.
+		E&eacute;n of meer deelnemers bekijken de kaartjes. Vervolgens groeperen zij kaartjes op een manier dat het voor hen logisch lijkt. Achteraf bedenken de deelnemers groepsnamen voor die groepen. Je kan een dergelijke card sort sessie met meerdere groepen doen, parallel aan elkaar of kort op elkaar volgend.
+		Op deze manier krijg je inzicht in:
+		<ul>
+			<li>logische informatie structuren vanuit het perspectief van uw gebruiker</li>
+			<li>de verwachtingen van de gebruiker</li>
+			<li>bruikbare terminologie volgens de gebruiker</li>
+		</ul>
+
+	</div>
+		<span class="leesmeer" onclick="expand('cardsorting'); smoothAnchor('cardsorting');">&#9196; Lees meer &#9196;</span>
+	</div>
+	<div class="box dev1" id="demo"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_developing2.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('demo'); smoothAnchor('demo');">Online demo's</h2>
+		U heeft een idee van een product en wilt dit mooi kunnen presenteren aan een derde partij? Of u wilt dat ik mijn adviezen over het verbeteren van de gebruiksvriendelijkheid van uw product visualiseer, zodat het voor uw team gaat leven en makkelijk te interpreteren is? Dat kan. Ik maak dan voor u een online demo, waarin adviezen of functionaliteiten gevisualiseerd zijn en waarbij met de belangrijkste functionaliteiten valt te interacteren. Zie hier <a href="http://www.umanise.nl/concept/prototype/" target="_blank" title="Opent de demo in een nieuwe tab" alt="Opent de demo in een nieuwe tab">een voorbeeld</a>.
+	</div>
+	<span class="leesmeer" onclick="expand('demo'); smoothAnchor('demo');">&#9196; Lees meer &#9196;</span>
+</div>
+	<div class="box dev1" id="webapp"><div class="hidden">
+		<div id="dienstenimg"><img src="images/stick_developing.svg" width="100%" height="100%"></div>
+		<h2 class="headerclick" onclick="expand('webapp'); smoothAnchor('webapp');">Website ontwikkeling</h2>
+		Wilt u niet alleen een demo, maar gewoon direct de hele webapp of website? Ook dat kan ik voor u doen. Op basis van uw eisen en mijn inzicht in de usability en mijn inlevingsvermogen in uw doelgroep bouw ik voor u een complete website. Natuurlijk kan dit ook in combinatie met &eacute;&eacute;n of meer van bovenstaande usability onderzoeken, zodat de website optimaal aansluit bij de wensen van uw doelgroep en het doel dat u beoogt te behalen met de site.
+		</div>
+		<span class="leesmeer" onclick="expand('webapp'); smoothAnchor('webapp');">&#9196; Lees meer &#9196;</span>
+	</div>
+
+
+</div>	<!-- END OF CONTENT DIV -->
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       END OF CONTENT            	/////////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+
+<div id="footer">
+	<div id="fwrapper">
+		<div id=fcontact>
+			<a href="mailto:mail@umanise.nl">mail@umanise.nl</a><br>
+			06 30 737 625
+		</div>
+		<div id=fvoorwaarden>
+			<a href="Algemene voorwaarden Umanise.pdf" target="_blank">Algemene voorwaarden</a><br>
+			KvK-nummer: 53533453
+		</div>
+	</div>
+</div>
+<div id="totop"><a href="#top">&#x2191; Naar top &#x2191;</a></div>
+
+
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       END OF PAGE             			///////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+
+		<link rel='stylesheet' type='text/css' href='css/stylesheetmain.css' id="stylemain"/>
+		<link rel='stylesheet' type='text/css' href='css/stylesheetall.css' id="styleall"/>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+		<script type='text/javascript' src='js/functions.js'></script>
+		<script type='text/javascript' src='js/javascript.js'></script>
+
+		<!-- google analytics code begin -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('set', 'anonymizeIp', true);
+			ga('create', 'UA-26325015-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- google analytics code end -->
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!--
+Author & productowner: Teun Blijlevens, Umanise.
+Date:
+Contact: mail@umanise.nl
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Umanise - Portfolio</title>
+	</head>
+
+	<body>
+		<div id="header">
+				<div id="hwrapper">
+					<div id="logo"><a href="index.html"><img src="images/umaniselogo.png" id="ulogo" height="100%"></a></div>
+					<div id="menuwrapper">
+						<a href="index.html"><div id="index" class="menu">Home</div></a>
+						<a href="diensten.html"><div id="diensten" class="menu">Diensten</div></a>
+						<a href="portfolio.html"><div id="portfolio" class="menu">Portfolio</div></a>
+						<a href="contact.html"><div id="contact" class="menu">Contact</div></a>
+					</div>
+				</div>
+		</div>
+
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       CONTENT STARTS HERE             /////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+		<div id="content">
+			<div id="popup" >hoi</div>
+			<div id="summary">
+				<h2 class="headerclick" onclick="expand('observatieonderzoek'); smoothAnchor('observatieonderzoek');">Opdrachtgevers</h2>
+				<div class="col1">
+					<img src="images/ruglogo.png" width="100px" class="logo">
+					<img src="images/kullogo.png" width="100px" class="logo">
+					<img src="images/vawlogo.png" width="100px" class="logo">
+					<img src="images/venecalogo.png" width="100px" class="logo">
+					<img src="images/dauwlogo.png" width="100px" class="logo">
+					<img src="images/huddleslogo.png" width="100px" class="logo">
+					<img src="images/dgzlogo.png" width="100px" class="logo">
+					<img src="images/egclogo.png" width="100px" class="logo">
+					<img src="images/vdzlogo.png" width="100px" class="logo"><br>
+				</div>
+				<div class="col2">
+					Hieronder vindt u een aantal voorbeelden van uitgevoerde opdrachten.
+				</div>
+			</div>
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       BOXES START HERE            	///////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+			<div class="box" id="rugmodel"><div class="hidden2"> <!-- only shows part of the text unless expanded, see css ''.hidden2' and function 'expand'-->
+				<div id="portfolioimg"><img src="images/rugpluskul.png" width="100%"></div>
+				<h2 class="headerclick" onclick="expand('rugmodel', 300); smoothAnchor('rugmodel');">RUG en KU Leuven: career choice model</h2>
+				<h5>Opdracht</h5>
+				Bouw een webapp die ons simulatie model visualiseert en interactief maakt voor onze lezers. Wij willen graag dat de lezers van onze publicatie over het proces van studiekeuze zelf kunnen spelen met de parameters, zodat zij zien wat het effect ervan is in de gesimuleerde studiekeuze trajecten.
+
+				<h5>Reactie van de klant</h5>
+				<i>"Teun heeft voor ons een web-applicatie gebouwd die gebaseerd is op een wetenschappelijke simulatiestudie omtrent studiekeuze. Als een van de leiders van het team dat deze studie heeft uitgevoerd, kan ik het werk dat Teun heeft afgeleverd goed beoordelen. Ik was sterk onder de indruk van de kwaliteit van het werk dat hij in relatief korte tijd heeft afgeleverd. Hij heeft een behoorlijk gecompliceerd model op een zeer inzichtelijke manier vertaald naar een web-app, en ben ervan overtuigd dat zijn werk de impact van onze studie sterk ten goede zal komen. Ook was ik bijzonder goed te spreken over hoe Teun in tussenstadia van het project feedback snel verwerkte - hij dacht altijd mee, kwam met uitstekende eigen initiatieven, communiceerde op een heldere en gestructureerde manier, en stelde zich bijzonder dienstbaar op. Ik had me geen betere medewerker kunnen wensen, en wil hem hierbij dan ook zeer graag de best mogelijke aanbeveling geven!"</i> - P. van den Berg, postdoctoraal onderzoeker Katholieke Universiteit Leuven
+				<h5>Aanpak</h5>
+<!--			<img src="images/portfoliorugmethode.png" class="methodeimg" width="100%">
+-->
+				<ul>
+					<li>Interview met de opdrachtgever:
+						<br>Wat is het doel van de site? Wie is de doelgroep? Wat houdt het onderzoek in? Hoe werkt het simulatie model precies?</li>
+					<li>Brainstorming:
+						<br>Hoe zijn de vele getallen te visualiseren?.</li>
+					<li>Concepting:
+						<br>Creatieve sessies waarin gezocht wordt naar verschillende webapp layouts en wat wel en wat niet te tonen in de app.</li>
+					<li>Vertaling code:
+						<br>Het in C++ (programmeertaal) geschreven simulatie model vertalen naar javascript, zodat het live kan 'runnen' op een website.</li>
+					<li>Webapp ontwikkeling:
+						<br>In een iteratief proces wordt de app ontwikkeld (html, css, javascript), telkens met terugkoppeling naar de opdrachtgever en wijziging of aanvulling van de app op basis van de verkregen feedback.</li>
+				</ul>
+				<h5>Resultaat</h5>
+				<ul>
+					<li>De webapp:
+						<br>Een 'live' animatie van een studiekeuze traject. Klik <a href="http://www.umanise.nl/careerchoicemodel" target="_blank" title="Opent de webapp in een nieuwe tab" alt="Opent de webapp in een nieuwe tab">hier</a> om zelf met de app te interacteren (opent in een nieuwe tab).</li>
+					<li>Interactief:
+						<br>Gebruikers kunnen zelf 'aan de knoppen' zitten en studiekeuze trajecten simuleren door waardes van input parameters te veranderen en te zien hoe dat het resultaat beïnvloed.</li>
+					<li>Instant play:
+						<br>Doordat het model niet eerst wordt uitgelegd (de gebruiker heeft er immers al over gelezen in de publicatie), maar juist het model direct zichtbaar is kunnen de bezoekers direct op 'play' klikken.</li>
+					<li>Snelle uitleg:
+						<br>Aangezien het simulatiemodel best complex is krijgen de gebruikers korte uitleg bij de parameters op het moment dat zij iets met de parameters willen doen. De uitleg is makkelijk te negeren voor diegenen die het al kennen (mensen die de publicatie uitvoerig hebben gelezen). Voor diegenen die een beetje hulp kunnen gebruiken is het een snelle herinnering van hoe het ook alweer zit.</li>
+					<li>Begrijpelijk en aantrekkelijk:
+						<br>In plaats van een tabel vol getallen is de data uit het onderzoek visueel en interactief, waardoor de betekenis van de verkregen data veel begrijpelijker en behapbaarder wordt.</li>
+				</ul>
+				<a href="http://www.umanise.nl/careerchoicemodel" target="_blank" title="Opent de webapp in een nieuwe tab" alt="Opent de webapp in een nieuwe tab"><img src="images/careerchoicegif.gif" class="resultaatimg" width="100%"></a>
+				</div>
+				<span class="leesmeer" onclick="expand('rugmodel', 300); smoothAnchor('rugmodel');">&#9196; Lees meer &#9196;</span>
+			</div>
+			<div class="box" id="vaw"><div class="hidden2">
+				<div id="portfolioimg"><img src="images/vawlogo2.png"></div>
+				<h2 class="headerclick" onclick="expand('vaw', 300); smoothAnchor('vaw');">Vending@Work: automatisering van mobiele registratie</h2>
+				<h5>Opdracht</h5>
+				Onderzoek de gebruiksvriendelijkheid van een PDA systeem dat wij willen invoeren. Met het systeem wordt de papieren administratie van onze operators (koeriers die snoepautomaten bijvullen op locatie) gedigitaliseerd.
+				<h5>Reactie van de klant</h5>
+				<i>"Umanise heeft voor ons een expert review uitgevoerd op ons in te voeren PDA systeem. In de nabije toekomst gaan wij PDA's gebruiken in onze operating. Teun Blijlevens van Umanise heeft zeer bruikbare adviezen gegeven die de gebruikersvriendelijkheid enorm zal verbeteren. Het rapport en zijn presentatie waren erg duidelijk en wij zullen zijn aanbevelingen zeker gaan volgen."</i> - T. Hermsen, directeur Vending@Work
+				<h5>Aanpak</h5>
+				<ul>
+					<li>Expert review:
+						<br>Snel verbeterpunten detecteren op basis van usability inzichten</li>
+					<li>Observatieonderzoek:
+						<br>Meerijden met koerier op zijn werkdag, observeren en filmen van interacties</li>
+					<li>Interviews:
+						<br>Operators vragen hoe het beter kan</li>
+					<li>Analyse en concepting:
+						<br>Onderzoeksresultaten analyseren, gevolgd door creatieve sessies waarin naar oplossingen wordt gezocht voor de gevonden problemen.</li>
+					<li>Adviesrapport:
+						<br>Concreet met oplossingsgerichte aanbevelingen</li>
+					<li>Prototype:
+						<br><a href="http://www.umanise.nl/concept/prototype" target="_blank" title="Opent de demo in een nieuwe tab" title="Opent de demo in een nieuwe tab">Online interactieve demo</a>, waarin de aanbevelingen zijn gevisualiseerd, handig voor de ontwikkelaar om erbij te houden
+					<li>Presentatie:
+						<br>Bij zowel opdrachtgever als systeem ontwikkelaar</li>
+				</ul>
+				<img src="images/portfoliovendingmethode.png" class="methodeimg" width="100%">
+
+				<h5>Resultaat</h5>
+				<ul>
+					<li>Aangepast op de gebruiker:
+						<br>Systeem is beter aangepast op de situatie, omgeving en het werkproces van de operator</li>
+					<li>Flexibiliteit:
+						<br>Niet elke operator werkt in dezelfde volgorde. Vrije navigatie door de app en het mogelijk maken van zowel een taagerichte als een automaatgerichte ori&euml;ntatie zorgen ervoor dat elke operator zijn eigen werkproces kan hanteren zonder effici&euml;ntie verlies. </li>
+					<li>Minder acties:
+						<br>De acties die een operator in de app moet voltooien om een automaat af te handelen is meer dan gehalveerd zonder dat het resultaat is aangetast.</li>
+					<li>Massale tijdsbesparing:
+						<br>De verwachte tijdswinst is 1 tot 2 uur per operator per dag.</li>
+					<li>ROI:
+						<br>De verwachte terugverdientijd voor het ontwikkelen en implementeren van de verbeteringen is minder dan 1 jaar.</li>
+				</ul>
+				<img src="images/portfoliovending.png" class="resultaatimg" width="100%">
+				</div>
+				<span class="leesmeer" onclick="expand('vaw', 300); smoothAnchor('vaw');">&#9196; Lees meer &#9196;</span>
+			</div>
+			<div class="box" id="veneca"><div class="hidden2">
+				<div id="portfolioimg"><img src="images/venecalogo2.png" width="100%" height="100%"></div>
+				<h2 class="headerclick" onclick="expand('veneca', 300); smoothAnchor('veneca');">Veneca: website vernieuwing</h2>
+				<h5>Opdracht</h5>
+				Onderzoek en adviseer hoe de website gebruiksvriendelijker kan worden gemaakt qua navigatie en inhoud
+
+				<h5>Reactie van de klant</h5>
+				<i>"Umanise heeft een concrete en heldere website-analyse gemaakt. Op basis van onze wensen kregen wij een uitgebreid advies met de vrijblijvende optie samen met een Umanise partner de webstie te laten bouwen. Dit bleek een gouden greep. Voor de webbouwer scheelde het veel tijd (en ons geld), want alle eisen stonden al uitgeschreven. Een optimale combinatie die ons veel heeft opgeleverd voor een zeer acceptabele totaalprijs."</i> - J. van Straten, algemeen secretaris Veneca
+				<h5>Aanpak</h5>
+				<ul>
+					<li>Interview met de opdrachtgever:
+						<BR>Wat is het doel en de doelgroep van de site?</li>
+					<li>Expert review:
+						<BR>Uitgebreid verbeterpunten detecteren op basis van usability inzichten en website analytics</li>
+					<li>Tekst analyse:
+						<BR>Samen met een communicatieadviseur alle teksten bekijken, verkorten en beter ordenen ter bevordering van een duidelijke navigatie structuur</li>
+					<li>Analyse en concepting:
+						<BR>Onderzoeksresultaten analyseren, gevolgd door creatieve sessies waarin naar oplossingen wordt gezocht voor de gevonden problemen.</li>
+					<li>Adviesrapport:
+						<BR>Concreet met oplossingsgerichte aanbevelingen</li>
+					<li>Presentatie:
+						<BR>Aanbevelingen helder en overtuigend overgebracht aan opdrachtgever</li>
+					<li>Doorverwijzing:
+						<BR>In contact brengen met website ontwikkelaar die deze aanbevelingen zeker kan implementeren</li>
+				</ul>
+				<img src="images/portfoliovenecamethode.png" class="methodeimg" width="100%">
+
+				<h5>Resultaat</h5>
+				<ul>
+					<li>Minder menu knoppen:
+						<br>Beter overzicht wat de site te bieden heeft en makkelijker navigeren</li>
+					<li>Duidelijkere namen:
+						<br>De site is beter scanbaar door duidelijkere koppen, knoppen en links</li>
+					<li>Zichtbare zoekfunctie:
+						<br>Men hoeft niet meer te 'zoeken' naar de zoekfunctie</li>
+					<li>Effici&euml;ntere informatie indeling:
+						<br>Minder pagina's nodig, meer overzicht en duidelijkere navigatie</li>
+					<li>Duidelijker inloggedeelte:
+						<br>Leden hoeven niet meer te zoeken om in te loggen</li>
+					<li>Professionelere uitstraling:
+						<br>Een website die beter past bij het heden geeft een betere gebruikservaring en meer vertrouwen in de organisatie</li>
+				</ul>
+				<img src="images/portfolioveneca.png" class="resultaatimg" width="100%">
+			</div>
+				<span class="leesmeer" onclick="expand('veneca', 300); smoothAnchor('veneca');">&#9196; Lees meer &#9196;</span>
+			</div>
+			<div class="box" id="dauw"><div class="hidden2">
+				<div id="portfolioimg"><img src="images/dauwlogo2.png" height="170px"></div>
+				<h2 class="headerclick" onclick="expand('dauw', 300); smoothAnchor('dauw');">Dauw: verbetering nieuwe website</h2>
+				<h5>Opdracht</h5>
+				Test de usability van een innovatieve website die wij voor een klant hebben gemaakt. Onderzoek en adviseer hoe de website gebruiksvriendelijker kan.
+				<h5>Reactie van de klant</h5>
+				<i>"Voor een website van een opdrachtgever bij Dauw, heeft Teun een uitgebreid onderzoek gedaan naar het gebruiksgemak. Dit resulteerde in een uitermate gedetailleerd en intelligent uitgedacht rapport. Bij Dauw waren we erg onder de indruk van de creatieve oplossingen die Teun aan de hand van de kritieken wist te bedenken. In het opgeleverde rapport heeft Teun zeer heldere en concrete adviezen opgeleverd, waardoor het gebruiksgemak enorm zal toenemen."</i> - D. van Willigenburg, co-founder Dauw
+				<h5>Aanpak</h5>
+				<ul>
+					<li>Interview met de opdrachtgever:
+						<br>Hoe zijn jullie gekomen tot dit ontwerp? Waarom zijn bepaalde aparte keuzes gemaakt?</li>
+					<li>Interview met de klant:
+						<br>Wat is het doel en wie is de doelgroep van de site?
+					<li>Expert review:
+						<br>Snel verbeterpunten detecteren op basis van usability inzichten</li>
+					<li>Persona's:
+						<br>Fictieve gebruikers van de site opstellen ter bevordering van het uit te voeren observatieonderzoek.</li>
+					<li>Observatieonderzoek:
+						<br>Op basis van persona's en fictieve situaties gebruikers taken laten uitvoeren en hun interacties met de site observeren en filmen</li>
+					<li>Interviews met de onderzoeksdeelnemers:
+						<br>Wat is er goed? wat kan er beter? hoe kan dat beter?</li>
+					<li>Analyse en concepting:
+						<br>Onderzoeksresultaten analyseren, gevolgd door creatieve sessies waarin naar oplossingen wordt gezocht voor de gevonden problemen. </li>
+					<li>Adviesrapport:
+						<br>Concreet met oplossingsgerichte aanbevelingen</li>
+					<li>Presentatie:
+						<br>Het ontwikkelteam van de site enthousiast maken met helder gevisualiseerde en overtuigende aanbevelingen</li>
+				</ul>
+				<img src="images/portfoliodauwmethode.png" class="methodeimg" width="100%">
+
+				<h5>Resultaat</h5>
+				<ul>
+					<li>Vergroot content oppervlakte:
+						<br>Meer ruimte voor tekst en plaatjes</li>
+					<li>Effici&euml;ntere informatie indeling:
+						<br>Minder pagina's nodig, meer overzicht</li>
+					<li>Minder knoppen:
+						<br>De betere informatie indeling zorgt ook voor kleinere (sub)menu's wat ten goede komt van de navigatie</li>
+					<li>Het bedrijf heeft een 'gezicht' gekregen:
+						<br>Doormiddel van plaatjes krijgen afdelingen een beter 'gezicht', waardoor de gebruiker beter weet waar hij mee te maken heeft.</li>
+					<li>Duidelijkere namen:
+						<br>De gebruiker weet beter wat hij onder bepaalde knoppen en koppen kan verwachten</li>
+					<li>Beter scanbare teksten:
+						<br>Beter passende koppen, gebruik van functionele blanco regels en gebruik van links zorgen ervoor dat de teksten sneller te scannen zijn, zodat de gebruiker sneller vindt wat hij/zij nodig heeft.</li>
+				</ul>
+				<img src="images/portfoliodauw.png" class="resultaatimg" width="100%">
+				</div>
+				<span class="leesmeer" onclick="expand('dauw', 300); smoothAnchor('dauw');">&#9196; Lees meer &#9196;</span>
+			</div>
+
+		</div>	<!-- END OF CONTENT DIV -->
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       END OF CONTENT            	/////////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+<div id="footer">
+	<div id="fwrapper">
+		<div id=fcontact>
+			<a href="mailto:mail@umanise.nl">mail@umanise.nl</a><br>
+			06 30 737 625
+		</div>
+		<div id=fvoorwaarden>
+			<a href="Algemene voorwaarden Umanise.pdf" target="_blank">Algemene voorwaarden</a><br>
+			KvK-nummer: 53533453
+		</div>
+	</div>
+</div>
+
+<div id="totop"><a href="#top">&#x2191; Naar top &#x2191;</a></div>
+
+
+<!--
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////       END OF PAGE             			///////////////////
+/////////////////////////////////////////////////////////////////////////////
+-->
+		<link rel='stylesheet' type='text/css' href='css/stylesheetmain.css'/>
+		<link rel='stylesheet' type='text/css' href='css/stylesheetall.css'/>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+		<script type='text/javascript' src='js/functions.js'></script>
+		<script type='text/javascript' src='js/javascript.js'></script>
+
+		<!-- google analytics code begin -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('set', 'anonymizeIp', true);
+			ga('create', 'UA-26325015-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<!-- google analytics code end -->
+</body>
+</html>

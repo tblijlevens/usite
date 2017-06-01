@@ -1,0 +1,161 @@
+/*
+Author & productowner: Teun Blijlevens, Umanise.
+Date:
+Contact: mail@umanise.nl
+*/
+
+html, body {
+
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, Sans-Serif;
+    color: black;
+    line-height: 1.6rem;
+    text-align: center;
+}
+/*
+@media only screen and (min-width: 360px){.flow-text{font-size:1.0rem; line-height: 1.6rem;}}
+@media only screen and (min-width: 390px){.flow-text{font-size:1.024rem; line-height: 1.6rem;}}
+@media only screen and (min-width: 420px){.flow-text{font-size:1.048rem; line-height: 1.6rem;}}
+@media only screen and (min-width: 450px){.flow-text{font-size:1.072rem; line-height: 1.7rem;}}
+@media only screen and (min-width: 480px){.flow-text{font-size:1.096rem; line-height: 1.7rem;}}
+@media only screen and (min-width: 510px){.flow-text{font-size:1.12rem; line-height: 1.7rem;}}
+@media only screen and (min-width: 540px){.flow-text{font-size:1.144rem; line-height: 1.8rem;}}
+@media only screen and (min-width: 570px){.flow-text{font-size:1.168rem; line-height: 1.8rem;}}
+@media only screen and (min-width: 600px){.flow-text{font-size:1.192rem; line-height: 1.8rem;}}
+@media only screen and (min-width: 630px){.flow-text{font-size:1.216rem; line-height: 1.9rem;}}
+@media only screen and (min-width: 660px){.flow-text{font-size:1.24rem; line-height: 1.9rem;}}
+@media only screen and (min-width: 690px){.flow-text{font-size:1.264rem; line-height: 1.9rem;}}
+@media only screen and (min-width: 720px){.flow-text{font-size:1.288rem; line-height: 2rem;}}
+@media only screen and (min-width: 750px){.flow-text{font-size:1.312rem; line-height: 2rem;}}
+@media only screen and (min-width: 780px){.flow-text{font-size:1.336rem; line-height: 2rem;}}
+@media only screen and (min-width: 810px){.flow-text{font-size:1.36rem; line-height: 2.1rem;}}
+@media only screen and (min-width: 840px){.flow-text{font-size:1.384rem; line-height: 2.1rem;}}
+@media only screen and (min-width: 870px){.flow-text{font-size:1.408rem; line-height: 2.1rem;}}
+@media only screen and (min-width: 900px){.flow-text{font-size:1.432rem; line-height: 2.2rem;}}
+@media only screen and (min-width: 930px){.flow-text{font-size:1.456rem; line-height: 2.2rem;}}
+@media only screen and (min-width: 960px){.flow-text{font-size:1.48rem; line-height: 2.2rem;}}
+@media only screen and (max-width: 360px){.flow-text{font-size:1.0rem; line-height: 1.6rem;}}
+*/
+#header {
+  position: fixed;
+  z-index: 6;
+  pointer-events: none;
+  right: 0px;
+  left: 0px;
+  top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  height:100px;
+	Width: calc(100% - 25px);
+	border-width: 0px;
+	border-color: inherit;
+	border-style: solid;
+  background-color: white;
+  text-align:center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000099;
+}
+
+a:link, a:visited {
+    color: #000099;
+}
+
+h2 {
+  font-size: 1.5rem;
+  display: flex;    /* makes width flexible until bordering div instead of width over whole parent width*/
+}
+h5 {
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+ul {
+
+  list-style-type: disc;
+  list-style-image: url('../images/greencheck1415.png');
+}
+ul.summary {
+  list-style-position: inside;
+  padding-left: 0;
+}
+ul.nested {
+  list-style-type: disc;
+  margin-left: 15px;
+  list-style-image: none;
+}
+
+.css-checkbox{
+  position: absolute;
+  display: none;
+}
+
+.css-checkbox + label{
+    background:url("../images/emptycheck1516.png") no-repeat;
+    padding: 0 0 0 20px;
+    cursor: pointer;
+    margin: 0px 0px 0px 0px;
+}
+
+.css-checkbox:checked + label{
+    background:url("../images/filledcheck1516.png") no-repeat;
+    padding: 0px 0px 0px 20px;
+    cursor: pointer;
+    margin: 0px 0px 0px 0px;
+}
+form {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, Sans-Serif;
+  color: black;
+  line-height: 1.6rem;
+}
+textarea {
+  width: 60%;
+  height: 100px;
+}
+
+#footer {
+  position: relative;
+  z-index: 5;
+  top: 125px;
+  right: 0px;
+  left: 0px;
+  height:70px;
+  Width: calc(100% - 25px);
+  text-align:left;
+  font-size: 0.9rem;
+  margin:auto;
+}
+
+#fwrapper {
+  position: relative;
+  width: 80%;
+  min-width: 500px;
+
+  height: 100%;
+  background-color: #854687;
+  background-image: url(../images/achter-01.gif);
+  border-radius: 5px;
+  margin: auto;
+  padding: 5px 15px 5px 15px;
+}
+#fcontact {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  line-height: 34px;
+  vertical-align: middle;
+}
+#fvoorwaarden {
+  bottom: 0px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  float: right;
+  line-height: 34px;
+  vertical-align: middle;
+}

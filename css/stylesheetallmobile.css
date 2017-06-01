@@ -1,0 +1,136 @@
+/*
+Author & productowner: Teun Blijlevens, Umanise.
+Date:
+Contact: mail@umanise.nl
+*/
+
+#header a:link, #header a:visited {
+    color: #000099;
+    text-decoration: none;
+}
+#header a:hover {
+    color: #FFCA4C;
+}
+#hwrapper{
+  width:90%;
+  min-width: 470px;
+  height: 100%;
+  border-style: solid;
+  border-width: 0px;
+  margin:auto;
+}
+#logo {
+	z-index: 5;
+  width:130px;
+  height:100%;
+	background-color: none;
+	border-width: 0px;
+	border-style: solid;
+  float:left;
+  text-align:left;
+}
+#menuwrapper{
+  position: relative;
+  left: 150px;
+  Width: calc(100% - 150px);
+  height: 100%;
+  border-style: solid;
+  border-width: 1px;
+}
+.menu {
+  position: static;
+	z-index: 5;
+  width: 20%;
+  height:100%;
+	background-color: white;
+	border-width: 0px 0px 0px 1px;
+  border-color: #000099;
+	border-style: solid;
+  float:left;
+  line-height: 150px;
+  margin-left: 20px;
+}
+#home {
+  border-width: 0px;
+}
+
+/*/////////////////////////////// HEADER ENDS HERE ///////////////////////////////*/
+
+
+#content {
+  position: absolute;
+  z-index: 5;
+  top: 165px;
+  right: 0px;
+  left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+	Width: calc(100% - 25px);
+	Height: auto;
+	border-radius: 0%;
+	border-width: 0px;
+	border-color: inherit;
+	border-style: solid;
+}
+
+
+.box {
+	position: relative;
+	top: 10%;
+	z-index: 5;
+  width:90%;
+  min-width: 470px;
+  height:auto;
+  min-height:150px;
+  height:auto !important;       /* for IE as it does not support min-height */
+  height:150px;                  /* for IE as it does not support min-height */
+	background-color: #FFCA4C;
+	border-radius: 1%;
+	border-width: 0px 0px 0px 0px;
+	border-color: inherit;
+	border-style: solid;
+  padding: 5px 5px 5px 5px;
+  margin:auto;
+  margin-bottom: 25px;
+  }
+#dienstimg {
+	position: relative;
+	z-index: 5;
+  width:auto;
+  width:125px;
+  height:125px;
+	border-radius: 1%;
+	border-width: 0px;
+	border-color: inherit;
+	border-style: solid;
+  float: right;
+  margin: 10px 10px 3px 10px;
+}
+#squarespecs {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  z-index: 5;
+  Width: 15%;
+  min-width: 150px;
+  Height: auto;
+  background-color: #FFCA4C;
+  border-radius: 1%;
+  border-width: 1px 1px 1px 1px;
+  border-color: inherit;
+  border-style: solid;
+}
+#browserspecs {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  z-index: 5;
+  Width: 15%;
+  min-width: 150px;
+  Height: auto;
+  background-color: #FFCA4C;
+  border-radius: 1%;
+  border-width: 1px 1px 1px 1px;
+  border-color: inherit;
+  border-style: solid;
+}
