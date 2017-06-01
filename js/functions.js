@@ -18,9 +18,9 @@ var active_Menu_Item = function() {   // get the name of the page from the url
 };
 window.onload = function() {
 
-  $("#"+active_Menu_Item()).css({'text-decoration': 'underline',   'background-image': "url('images/achter-01.gif')"}); //detect page and underline that div (menu div has same name as page name)
+  $("#"+active_Menu_Item()).css({'text-decoration': 'underline',   'background-image': "url('images/achter-light.svg')"}); //detect page and underline that div (menu div has same name as page name)
 // of  'background-color': 'rgba(0, 0, 153, 0.15)' //<-- transparent blue
-// of   achter-01.gif
+// of   achter-dark.svg
 };
 
 

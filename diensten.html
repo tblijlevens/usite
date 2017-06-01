@@ -41,6 +41,12 @@ Contact: mail@umanise.nl
 				<li><a href="#paperprototyping" onclick="expand('paperprototyping', 1000)">Paper prototyping</a></li>
 			</ul>
 		</div>
+		<div id="dev" class="col3">
+			<input type="checkbox" id="dev1" class="css-checkbox" title="Filter" checked><label for="dev1" class="devlabel"><b>Development</b></label>
+			<ul class="summary">
+				<li><a href="#webapp" onclick="expand('webapp', 1000)">Webapp ontwikkeling</a></li>
+			</ul>
+		</div>
 		<div id="usre" class="col2">
 			<input type="checkbox" id="usre1" class="css-checkbox" title="Filter" checked><label for="usre1"><b>User research</b></label>
 			<ul class="summary">
@@ -50,13 +56,6 @@ Contact: mail@umanise.nl
 				<li><a href="#cardsorting" onclick="expand('cardsorting', 1000)">Card sorting</a></li>
 			</ul>
 		</div>
-		<div id="dev" class="col3">
-			<input type="checkbox" id="dev1" class="css-checkbox" title="Filter" checked><label for="dev1" class="devlabel"><b>Development</b></label>
-			<ul class="summary">
-				<li><a href="#demo" onclick="expand('demo', 1000)">Online demo's</a></li>
-				<li><a href="#webapp" onclick="expand('webapp', 1000)">Webapp ontwikkeling</a></li>
-			</ul>
-		</div>
 	</div>
 <!--
 /////////////////////////////////////////////////////////////////////////////
@@ -64,7 +63,7 @@ Contact: mail@umanise.nl
 /////////////////////////////////////////////////////////////////////////////
 -->
 	<div class="box usco1 flow-text" id="expertreview">	<div class="hidden"> <!-- only shows part of the text unless expanded, see css ''.hidden' and function 'expand'-->
-		<div id="dienstenimg"><img src="images/exreplaatje.jpg" width="100%" height="100%"></div>
+		<div id="dienstenimg"><img src="images/stick_expertreview.svg" width="100%" height="100%"></div>
 		<h2 class="headerclick" onclick="expand('expertreview'); smoothAnchor('expertreview');">Expert Review</h2>
 		U heeft een product of prototype en heeft behoefte om snel te weten te komen hoe het zit met het <b>gebruiksgemak</b> en de gebruikservaring ervan. Denk aan de navigatie van uw website, of de overzichtelijkheid van uw app. Ik voer een analyse op uw product uit, waarbij ik mij verplaats in uw doelgroep en de laatste  <span id="hoverpopup" onmouseover="hoverdiv(event, 'Gebruiksvriendelijkheid is een concept dat onder andere door ergonomen wordt bestudeerd. Iets is gebruik(er)svriendelijk wanneer...<br><i>Bron: <a href=\'https://nl.wikipedia.org/wiki/usability\' target=\'_blank\'>Wikipedia</a>.')" onmouseout="hoverdivout()">usability</span> inzichten in acht houdt.
 		<h5>Wat heb ik er aan?</h5>
@@ -72,7 +71,7 @@ Contact: mail@umanise.nl
 		<span class="leesmeer" onclick="expand('expertreview'); smoothAnchor('expertreview');">&#9196; Lees meer &#9196;</span>
 	</div>
 	<div class="box usco1" id="abtest"><div class="hidden">
-		<div id="dienstenimg"><img src="images/abplaatje.png" width="100%" height="100%"></div>
+		<div id="dienstenimg"><img src="images/stick_abtesting.svg" width="100%" height="100%"></div>
 		<h2 class="headerclick" onclick="expand('abtest'); smoothAnchor('abtest');">A/B testen</h2>
 		Help! Moet die knop <b>rood of groen</b>? Moet hij in het midden staan of links uitgelijnd? Soms is het erg lastig dit soort keuzes te maken. En terecht: de plaatsing of kleur van een enkel element op uw site of app kan een enorm verschil maken in de verkoopcijfers of het aantal mensen die zich inschrijven op een nieuwsbrief. Zie hier een voorbeeld van <a href="https://unbounce.com/a-b-testing/shocking-results/" target="_blank" title="Opent in een nieuwe tab" alt="Opent in een nieuwe tab">12 verrassende A/B-test resultaten</a> (opent in een nieuwe tab).
 		<h5>Wat is A/B testen?</h5>
@@ -100,7 +99,7 @@ Contact: mail@umanise.nl
 		<span class="leesmeer" onclick="expand('observatieonderzoek'); smoothAnchor('observatieonderzoek');">&#9196; Lees meer &#9196;</span>
 	</div>
 	<div class="box usco1" id="paperprototyping"><div class="hidden">
-		<div id="dienstenimg"><img src="images/stick_obsoz2.svg" width="100%" height="100%"></div>
+		<div id="dienstenimg"><img src="images/stick_paperprot.svg" width="100%" height="100%"></div>
 		<h2 class="headerclick" onclick="expand('paperprototyping'); smoothAnchor('paperprototyping');">Paper prototyping</h2>
 		Heeft u nog geen werkend prototype of bestaand product, maar wilt u wel weten of uw ideeën een duidelijke navigatiestructuur bieden voor uw doelgroep? Dan kan <b>paper prototyping</b> de oplossing bieden. Met behulp van paper prototyping is het mogelijk om al	in het beginstadium van de ontwikkeling van bijvoorbeeld een website of applicatie het functioneel design te testen bij de gebruikers.
 
@@ -136,7 +135,7 @@ Contact: mail@umanise.nl
 		<span class="leesmeer" onclick="expand('interviews'); smoothAnchor('interviews');">&#9196; Lees meer &#9196;</span>
 	</div>
 	<div class="box usre1" id="focusgroups"><div class="hidden">
-		<div id="dienstenimg"><img src="images/stick_cardsorting.svg" width="100%" height="100%"></div>
+		<div id="dienstenimg"><img src="images/stick_focusgroup.svg" width="100%" height="100%"></div>
 		<h2 class="headerclick" onclick="expand('focusgroups'); smoothAnchor('focusgroups');">Focus groups</h2>
 		Het is ook mogelijk om <b>groepsdiscussies</b> te voeren in de vorm van focusgroups (ook wel paneldiscussies genoemd). In een focusgroup discussi&#235;ren 6 tot 10
 		mensen die iets met uw product te maken hebben. Dit zijn gebruikers, maar bijvoorbeeld ook experts uit relevante vakgebieden of uzelf. Dit is een goede kans voor het
@@ -148,7 +147,7 @@ Contact: mail@umanise.nl
 		<span class="leesmeer" onclick="expand('focusgroups'); smoothAnchor('focusgroups');">&#9196; Lees meer &#9196;</span>
 	</div>
 	<div class="box usre1" id="cardsorting"><div class="hidden">
-		<div id="dienstenimg"><img src="images/stick_cardsorting2.svg" width="100%"></div>
+		<div id="dienstenimg"><img src="images/stick_cardsorting.svg" width="100%"></div>
 		<h2 class="headerclick" onclick="expand('cardsorting'); smoothAnchor('cardsorting');">Card sorting</h2>
 		Met card sorting kom je erachter hoe gebruikers informatie verwachten te vinden en welke terminologie zij logisch vinden voor 'soorten' van informatie. Hiermee krijg je een veel beter beeld hoe je informatie op je site of app moet groeperen en hoe de navigatie in elkaar moet zitten.
 		<h5>Hoe dan?</h5>
@@ -164,20 +163,15 @@ Contact: mail@umanise.nl
 	</div>
 		<span class="leesmeer" onclick="expand('cardsorting'); smoothAnchor('cardsorting');">&#9196; Lees meer &#9196;</span>
 	</div>
-	<div class="box dev1" id="demo"><div class="hidden">
-		<div id="dienstenimg"><img src="images/stick_developing2.svg" width="100%" height="100%"></div>
-		<h2 class="headerclick" onclick="expand('demo'); smoothAnchor('demo');">Online demo's</h2>
-		U heeft een idee van een product en wilt dit mooi kunnen presenteren aan een derde partij? Of u wilt dat ik mijn adviezen over het verbeteren van de gebruiksvriendelijkheid van uw product visualiseer, zodat het voor uw team gaat leven en makkelijk te interpreteren is? Dat kan. Ik maak dan voor u een online demo, waarin adviezen of functionaliteiten gevisualiseerd zijn en waarbij met de belangrijkste functionaliteiten valt te interacteren. Zie hier <a href="http://www.umanise.nl/concept/prototype/" target="_blank" title="Opent de demo in een nieuwe tab" alt="Opent de demo in een nieuwe tab">een voorbeeld</a>.
-	</div>
-	<span class="leesmeer" onclick="expand('demo'); smoothAnchor('demo');">&#9196; Lees meer &#9196;</span>
-</div>
 	<div class="box dev1" id="webapp"><div class="hidden">
 		<div id="dienstenimg"><img src="images/stick_developing.svg" width="100%" height="100%"></div>
-		<h2 class="headerclick" onclick="expand('webapp'); smoothAnchor('webapp');">Website ontwikkeling</h2>
+		<h2 class="headerclick" onclick="expand('webapp'); smoothAnchor('webapp');">Online demo's</h2>
+		U heeft een idee van een product en wilt dit mooi kunnen presenteren aan een derde partij? Of u wilt dat ik mijn adviezen over het verbeteren van de gebruiksvriendelijkheid van uw product visualiseer, zodat het voor uw team gaat leven en makkelijk te interpreteren is? Dat kan. Ik maak dan voor u een online demo, waarin adviezen of functionaliteiten gevisualiseerd zijn en waarbij met de belangrijkste functionaliteiten valt te interacteren. Zie hier <a href="http://www.umanise.nl/concept/prototype/" target="_blank" title="Opent de demo in een nieuwe tab" alt="Opent de demo in een nieuwe tab">een voorbeeld</a>.
+		<br>
 		Wilt u niet alleen een demo, maar gewoon direct de hele webapp of website? Ook dat kan ik voor u doen. Op basis van uw eisen en mijn inzicht in de usability en mijn inlevingsvermogen in uw doelgroep bouw ik voor u een complete website. Natuurlijk kan dit ook in combinatie met &eacute;&eacute;n of meer van bovenstaande usability onderzoeken, zodat de website optimaal aansluit bij de wensen van uw doelgroep en het doel dat u beoogt te behalen met de site.
-		</div>
-		<span class="leesmeer" onclick="expand('webapp'); smoothAnchor('webapp');">&#9196; Lees meer &#9196;</span>
 	</div>
+	<span class="leesmeer" onclick="expand('webapp'); smoothAnchor('webapp');">&#9196; Lees meer &#9196;</span>
+</div>
 
 
 </div>	<!-- END OF CONTENT DIV -->
@@ -192,6 +186,9 @@ Contact: mail@umanise.nl
 		<div id=fcontact>
 			<a href="mailto:mail@umanise.nl">mail@umanise.nl</a><br>
 			06 30 737 625
+		</div>
+		<div id=fdisclaimer>
+			<a href="disclaimer.html">Disclaimer</a>
 		</div>
 		<div id=fvoorwaarden>
 			<a href="Algemene voorwaarden Umanise.pdf" target="_blank">Algemene voorwaarden</a><br>
