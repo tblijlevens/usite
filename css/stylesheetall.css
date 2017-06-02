@@ -151,18 +151,12 @@ Contact: mail@umanise.nl
     transition: max-height 0.15s ease-out;
     overflow: hidden;
     margin-bottom: 1rem;
-    border-width: 0px 0px 1px 0px;
-  	border-color: rgba(0, 0, 0, 0.2);
-  	border-style: dotted;
 }
 .hidden2 {  /* portfolio*/
     max-height: 240px;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
     margin-bottom: 1rem;
-    border-width: 0px 0px 1px 0px;
-  	border-color: rgba(0, 0, 0, 0.2);
-  	border-style: dotted;
 }
 .headerclick {
   cursor: pointer;
@@ -197,7 +191,7 @@ Contact: mail@umanise.nl
 #contactimg {
   position: relative;
 	z-index: 5;
-  width: 200px;
+  width: 215px;
   float: left;
   margin: 10px 25px 3px 10px;
 }
@@ -213,7 +207,14 @@ Contact: mail@umanise.nl
   margin: auto;
   display: block;
   }
-
+.indeximg{
+  position: relative;
+  width:95%;
+  margin: auto;
+  display: block;
+  margin-top: 20px
+  margin-bottom: 20px;
+}
 .leesmeer {
   position: relative;
   bottom: 5px;
