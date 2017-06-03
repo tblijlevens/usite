@@ -89,7 +89,7 @@ function expand(whatWasClicked, sum){
 
 }  //END diensten expand actions
 
-if (active_Menu_Item()==("portfolio")){
+if (active_Menu_Item()=="portfolio"){
 
   if (sum==500 || sum == 1000 || sum == 1300){ // if the div was clicked in the summary or other page wait untill scolled to anchor until expanding
     expanded.push(whatWasClicked);
@@ -124,7 +124,7 @@ else {  // if box is expanded do the opposite
 }
 } //END portfolio expand actions
 
-if (active_Menu_Item()==("index")){
+if (active_Menu_Item()!="diensten" && active_Menu_Item()!="portfolio"){
 
   if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
     expanded.push(whatWasClicked);  // push divid in array (keeping track of what is expanded)
