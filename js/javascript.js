@@ -125,9 +125,8 @@ $('a[href^="#"]').click(function() {    // when a anchor link is clicked (href b
 });
 
 // when anchor on other page also scroll to anchor with offset:
-var targethash = window.location.hash.slice(0, -1); // get the 1 of the end of the hash. 1 needs to be there, in order to start at the top of the page instead of at the anchor itself, causing the manu logo to shift sizes.
+var targethash = window.location.hash.slice(0, -1); // get the 1 of the end of the hash. 1 needs to be there, in order to start at the top of the page instead of at the anchor itself, causing the menu logo to shift sizes.
 if ( targethash != '' ){
-
   var $targethash = $(targethash);
   $('html, body').animate({scrollTop: 0},  100).delay(600).animate({scrollTop: $targethash.offset().top - 75},  500);
   var target = targethash.substr(1); // take of the '#' for the expand function
