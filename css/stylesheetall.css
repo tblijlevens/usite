@@ -175,6 +175,7 @@ Contact: mail@umanise.nl
   margin: 10px 0px 3px 10px;
   clear: none;
   text-align: right;
+  cursor: pointer;
 }
 #portfolioimg {
 	position: relative;
@@ -187,6 +188,7 @@ Contact: mail@umanise.nl
   float: right;
   margin: 10px 10px 3px 10px;
   text-align: right;
+  cursor: pointer;
 }
 #contactimg {
   position: relative;
@@ -221,6 +223,7 @@ Contact: mail@umanise.nl
   color: #000099;
   text-decoration: underline;
   cursor: pointer;
+  font-size: 1.3rem;
   /*
   border-width: 1px 0 0 0;
   border-color: #000099;
