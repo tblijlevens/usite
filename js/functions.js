@@ -140,6 +140,8 @@ else {  // if box is expanded do the opposite
   expanded.splice(index, 1);    // remove divid from array
 }
 } //END index expand actions
+
+ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
 };
 
 
