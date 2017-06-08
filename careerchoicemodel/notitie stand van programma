@@ -1,0 +1,38 @@
+Notitie model programma:
+
+Warnings moeten maar 1 keer verschijnen, ookal klikt de gbr 7 keer op de knop. (er gebeurt niks als gbr de tweede keer op de knop drukt binnen x tijd)
+Warnings blijven staan, wanneer je twee keer op set and run klikt. ook nadat warning niet meer relevant is. Mogelijk uberhaupt de warning gewoon laten staan en pas laten weghalen als set and run wordt geklikt.
+
+T2 gaat niet onder 0.
+
+
+de zoom van de browser op default 100% zetten.
+
+Nog geen namen in de tekst
+
+ervaring text wanneer optie boven t2 moet cooler
+
+De paramteres namen aanvullen met hun visual.
+
+Hele var begintimestep eruit.
+
+Obj lijntjes doormiddel van de stipdivjes lijn divjes van maken. Bij eke newoption begint het lijndivje klein (als stip) en wordt ie met elke timestep groter (lijn). Er zijn zo alleen obj lijntjes voor de actieve options. Ze moeten zelfde kleur hebben, maar vager oid. Aura's kunnen blijven op lijndiv right:0px;
+
+Wanneer graph loopt en je een nieuwe speed kiest gaan de divs en aura's in de nieuwe speed terwijl de lijntjes nog in de oude speed gaan.
+
+Piets end statistics score thingy?
+
+Subjective divjes geen shadow shine thing
+
+als winner moet ook aura van de winner zijn. nu is het de laatste option waar iets mee gebeurd is, waardoor bij max tijdsteps dat niet per se de winner is.
+
+IE compatible maken:
+Detect browser:
+http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+https://jsfiddle.net/9atsffau/
+Bovenstaand blijft niet altijd werken zegt ie zelf. Mogelijk deze?
+http://stackoverflow.com/questions/2400935/browser-detection-in-javascript
+
+if browser = IE, then don't do button push animation.
+
+Alle notities in het engels

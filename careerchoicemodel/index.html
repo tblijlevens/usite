@@ -1,0 +1,264 @@
+<!--
+Author & productowner: Teun Blijlevens, Umanise.
+Date: January 9th 2017
+(Re-)Use of this code is only allowed if written permission is given by the productowner.
+Contact: mail@umanise.nl
+-->
+
+<!DOCTYPE html>
+<html>
+	<head id="head">
+		<title>Career Choice Simulation Model</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet/stylesheet.css'/>
+				<link rel="stylesheet" href="stylesheet/jquery-ui.css">
+				<script type='text/javascript' src='script/arrays.js'></script>
+				<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+        <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js'></script>
+				<script type='text/javascript' src='script/experiences.js'></script>
+				<script type='text/javascript' src='script/random generator gaussian normal.js'></script>
+				<script type='text/javascript' src='script/studiekeuze model 04-06-2016.js'></script>
+				<script type='text/javascript' src='script/animationfunctions.js'></script>
+				<script type='text/javascript' src='script/animationforloop.js'></script>
+
+				<!-- google analytics code begin -->
+				<script>
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+					ga('set', 'anonymizeIp', true);
+					ga('create', 'UA-26325015-1', 'auto');
+					ga('send', 'pageview');
+
+				</script>
+
+				<!-- google analytics code end -->
+	</head>
+	<body id="everything">
+		<div id="maindiv">
+
+			<canvas id="myCanvas1" width="820" height="600"></canvas>		<!-- Option 1 subjective line -->
+			<canvas id="myCanvas2" width="820" height="600"></canvas>		<!-- Option 2 subjective line -->
+			<canvas id="myCanvas3" width="820" height="600"></canvas>		<!-- Option 3 subjective line -->
+			<canvas id="myCanvas4" width="820" height="600"></canvas>		<!-- Option 0 subjective dots -->
+			<canvas id="myCanvas5" width="820" height="600"></canvas>		<!-- Option 1 objective line -->
+			<canvas id="myCanvas6" width="820" height="600"></canvas>		<!-- Option 2 objective line -->
+			<canvas id="myCanvas7" width="820" height="600"></canvas>		<!-- Option 3 objective line -->
+
+
+			<div id="graphtitle" class="title"><b>Simulated career choice trajectory</b> &emsp;<span style="font-size:14px"><a href="#aboutanchor">read more</a></span></div>
+			<div id="ervaringen"></div>
+
+			<div id="hovertexts">
+				<div id="hovertitle" class="title">Information</div>
+				<div id="hoverinformation"></div>
+			</div>
+
+			<div id="wrongpars">
+				<div id="warningtitle" class="title"></div>
+				<div id="warning"></div>
+			</div>
+			<div id="min1">
+				<div id="min1Text">-1</div>
+			</div>
+			<div id="nul">
+				<div id="nulText">0</div>
+			</div>
+			<div id="Plus1">
+				<div id="Plus1Text">1</div>
+			</div>
+			<div id="Thresh1Line">
+				<div id="Thresh1Text">1.0&emsp;Consideration (<i><b>&#952;<sub>1</sub></b></i>)</div>
+			</div>
+			<div id="Plus2">
+				<div id="Plus2Text">2</div>
+			</div>
+			<div id="Thresh2Line">
+				<div id="Thresh2Text">2.0&emsp;Decision (<i><b>&#952;<sub>2</sub></b></i>)</div>
+			</div>
+			<div id="Plus3">
+				<div id="Plus3Text">3</div>
+			</div>
+			<div id="yAs">Fit of career option (<b>x<sub>o</sub></b> , <b>x<sub>p</sub></b>)</div>
+			<div id="xAs">Time</div>
+
+			<div id="steps"></div>
+			<div id="option0">				<!-- These are the subjective div dots that move over the graph -->
+			</div>
+			<div id="option1">
+			</div>
+			<div id="option2">
+			</div>
+			<div id="option3">
+			</div>
+
+
+		</div>			<!-- End of maindiv/graph -->
+
+		<div id="bottomright"></div> 	<!-- invisible div to check distance to browser edges and adjust sizes of graph etc. -->
+
+				<div id="GraphSettings">
+					<div id="parameters">
+					<div id="partitle" class="title">Parameters</div>
+						<div class='wrapper'>
+						    <form id='getParForm'>
+									<div class='probsample'>
+							        <lable id='probsampleLable' for='nameField'><i><b>m</b></i>: Exploration tendency:</lable>
+							        <input id='probsampleField' type="number" step="0.1" maxlength='5' value=0.5 min="0" max="1"onclick="this.select()" ></input>
+							    </div>
+									<div class='noise'>
+							        <lable id='noiseLable' for='nameField'><i><b>&alpha;</b></i>: Accuracy:</lable>
+							        <input id='noiseField' type="number" step="0.1" maxlength='5' value=0.5 min="0" max="1"onclick="this.select()"></input>
+							    </div>
+									<div class='threshold1'>
+						        <lable id='thresh1Lable' for='nameField'><i><b>&#952;<sub>1</sub></b></i>: Consideration threshold:</lable>
+						        <input id='thresh1Field' type="number" step="0.1" maxlength='5' value=1.0 min="-2" max="3.5" onclick="this.select()" ></input>
+						    </div>
+									<div class='threshold2'>
+							        <lable id='thresh2Lable' for='nameField'><i><b>&#952;<sub>2</sub></b></i>: Decision threshold:</lable>
+							        <input id='thresh2Field' type="number" step="0.1" maxlength='5' value=2.0  min=-2 max="4" onclick="this.select()" ></input>
+					    		</div>
+									<div id="defaults" onclick="ga('send', 'event', 'link', 'click', 'backtodefault');"><u>Back to defaults</u></div>
+							</form>
+							</div>
+						</div>	<!-- end parameters block -->
+
+							<div id="animationSettings">
+								<div id="anisettitle" class="title">Animation Speed</div>
+
+								<div id="speeds" >
+									<div id="speed1" onclick="ga('send', 'event', 'speed', 'click', 'speed1');">1</div>
+									<div id="speed2" onclick="ga('send', 'event', 'speed', 'click', 'speed2');">2</div>
+									<div id="speed3" onclick="ga('send', 'event', 'speed', 'click', 'speed3');">3</div>
+									<div id="speed4" onclick="ga('send', 'event', 'speed', 'click', 'speed4');">4</div>
+								</div>
+							</div>
+
+						    <div id='setParButton' onclick="ga('send', 'event', 'button', 'click', 'rungraph');"><img src="images/play.png"  class="image" height="20px"/><span class="buttontext">Set and run</span></div>
+				</div>
+
+		<div id="whathappened">
+
+			<div id="values">
+				<div id="valuetitle" class="title">Options under consideration</div>
+				<div id="livevalues">
+					<div id="option1title">1
+						<div id="option1obj"></div>
+						<div id="option1subj"></div>
+					</div>
+					<div id="option2title">2
+						<div id="option2obj"></div>
+						<div id="option2subj"></div>
+					</div>
+					<div id="option3title">3
+						<div id="option3obj"></div>
+						<div id="option3subj"></div>
+					</div>
+					<div id="titlestitle">
+						<div id="objectivetitle"><img src="images/dotline.png" width="25px"/> &nbsp; &nbsp; &nbsp; Objective fit <i>(<b>x<sub>o</sub></b>)</i></div>
+						<div id="subjectivetitle"><img src="images/solidline.png" width="25px"/> &nbsp; &nbsp; &nbsp; Perceived fit <i>(<b>x<sub>p</sub></b>)</i></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="counts">
+				<div id="countstitle" class="title">Exploration summary</div>
+				<div id="livecounts">
+					<div id="explored">broad explorations
+						<div id="countexplore">0</div>
+					</div>
+					<div id="exploited">in-depth explorations
+						<div id="countexploit">0</div>
+					</div>
+					<div id="newoption">options considered
+						<div id="countnewopt">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="menu">
+			<div id="zwartebalk1"></div>
+			<div id="zwartebalk"></div>
+			<div id="menutitle" class="title">Go to</div>
+				<div id="menucontent">
+					<div id="menutop">
+						<a href="#top">Graph</a>
+					</div>
+					<div id="menutable">
+						<a href="#waardentabel">Table</a>
+					</div>
+					<div id="menuabout">
+						<a href="#aboutanchor">About</a>
+					</div>
+				</div>
+		</div>
+
+
+		<div id="waardentabel">
+			<div id="tabelkoppen">
+				<div id="zwartebalk2"></div>
+				<div id="timesteps2kopje">Timesteps</div>
+				<div id="subj1waardenkopje">1. Perc. Fit</div>
+				<div id="obj1waardenkopje">1. Obj. Fit</div>
+				<div id="subj2waardenkopje">2. Perc. Fit</div>
+				<div id="obj2waardenkopje">2. Obj. Fit</div>
+				<div id="subj3waardenkopje">3. Perc. Fit</div>
+				<div id="obj3waardenkopje">3. Obj. Fit</div>
+				<div id="ervaringenTabel">Experience</div>
+			</div>
+
+				<div id="timesteps2waarden"><br></div>
+				<div id="subj1waardenwaarden"><br></div>
+				<div id="obj1waardenwaarden"><br></div>
+				<div id="subj2waardenwaarden"><br></div>
+				<div id="obj2waardenwaarden"><br></div>
+				<div id="subj3waardenwaarden"><br></div>
+				<div id="obj3waardenwaarden"><br></div>
+
+				<div id="ervaringenTabelWaarden"><br></div>
+
+
+		<div id="legeruimteonderaan">
+			<div id="aboutanchor"></div>
+
+		<div id="information">
+	<div id="abouttitle" class="title">About the Career Choice Model</div>
+				<div id="logos">
+				<div id="logostitle" class="title">Powered by</div>
+				<div id="ulogo"><a href="http://www.umanise.nl/?utm_source=careerchoicemodel&utm_medium=logo_banner&utm_campaign=come_via_choice_model" target="blanc"><img src="images/umaniselogo.png" width="100px"></a></div>
+				<div id="ruglogo"><img src="images/anonimouslogo.png" width="120px"></div>
+				<div id="kullogo"><img src="images/anonimouslogo.png" width="120px"></div>
+<!--				<div id="ruglogo"><img src="images/rug-logo 5.png" width="120px"></div>
+				<div id="kullogo"><img src="images/kuleuvenlogo.jpg" width="120px"></div> -->
+		</div>
+
+
+			<div id="aboutmodel"><br><br>
+					<h2>Publication</h2>
+						This animation is an interactive implementation of the dynamic model of career choice presented in the publication "A process-oriented approach to understanding career choice." by [NAMES] in [JOURNAL]. For details, refer to the original text [LINK] or contact the authors [E-MAIL ADDRESSES AND RESEARCHGATE LINKS] ***. Web-based implementation as well as graphic animation by Blijlevens (2017) of the company <a href="http://www.umanise.nl/?utm_source=careerchoicemodel&utm_medium=link_in_text&utm_campaign=come_via_choice_model" target="blanc">Umanise</a>.<p><br>
+
+						<H2>Framework of career choice</h2>
+						Adolescents often struggle to make a suitable career choice out of the large range of available options. As a consequence, many drop out of higher education prematurely, resulting in significant costs to both themselves and society. In our paper, we introduce a novel process-oriented framework aimed at understanding how adolescents make such choices. We conceptualize career choice as a process built up out of many experiences that result from broad exploration (sampling of new options) and in-depth exploration (further investigating of promising options). These experiences lead individuals to adjust their assessment of career options over time, eventually resulting in a decision.  <p><br>
+
+						<H2>Simulation and animation of career choice processes</h2>
+						Based on this conceptual framework, we constructed a computational model to simulate a large number of career choice trajectories. In our paper we present an extensive analysis of how the career choice process unfolds in this model, depending on three individual characteristics: 1) the balance between broad and in-depth exploration, 2) the accuracy in assessing how well career options will fit, and 3) the degree of selectiveness (in both considering options, and deciding on options). We partnered with Umanise to develop an interactive web application (above) that the reader can use to generate animated career choice trajectories based on our computational model. The application allows users to enter custom parameter values, and thereby gain first-hand experience with how the different factors affect the career choice process in our model. <p><br>
+
+						<H2>Outcomes of our simulation study</h2>
+						Based on our simulation study, we identify the conditions that lead to the emergence of two phase-inadequate features of the career choice process: ruminative exploration (repetitive exploration of the same option) and rash decision making (deciding based on very little exploration). We conclude that although these features are indeed associated with poor decisions in most cases, they are not always harmful, and they can even lead to better choices under some circumstances. Our model generates a number of concrete predictions that can be tested empirically, and, if supported by empirical evidence, can result in individually tailored tools to help adolescents make better career choices. More generally, our study shows how explicitly considering the dynamic aspects of complex developmental processes can lead to counterintuitive insights that one would not have arrived at by verbal reasoning alone.  <p><br>
+
+						<b>*** Note: </b>as the paper is currently under review, the authors need to remain anonymous. As soon as the paper is accepted for publication, all information between square brackets [EXAMPLE] and the university logos will be published here as well.
+	</div>
+		</div>
+
+		</div><br>
+
+		</div>
+
+
+
+
+		</body>
+</html>
