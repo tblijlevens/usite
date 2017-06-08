@@ -141,7 +141,7 @@ else {  // if box is expanded do the opposite
 }
 } //END index expand actions
 
-ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+ga('send', 'event', 'expand', 'expandclicked', "id:"+whatWasClicked);
 };
 
 
