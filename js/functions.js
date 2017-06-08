@@ -41,16 +41,16 @@ function checkboxOnOff (offoron, divid){
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////       EXPAND BOXES                  ///////////////////
 /////////////////////////////////////////////////////////////////////////////
-var expanded = [];
 function expand(whatWasClicked, sum){
   if (active_Menu_Item()=="diensten"){
 
     if (sum==500 || sum == 1000 || sum == 1300){ // if the div was clicked in the summary or other page wait untill scolled to anchor until expanding
-      expanded.push(whatWasClicked);
         $("#"+whatWasClicked).find(".hidden").delay(sum).queue(function (next) {
             $(this).css({'max-height': '800px', transition: 'max-height 1s ease-in'});
             //smoothly resize image only if box is contracted
             if ($("#"+whatWasClicked).find(".hidden").css('max-height') == '140px'){   //if box is contracted
+              ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+
                 var elementWidth = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").width()*1.5; // multiply image width by 1.5
                 var elementHeight = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").height()*1.5;
                 $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").animate({width: elementWidth, height: elementHeight}, 500); //resize picture with new values
@@ -63,7 +63,7 @@ function expand(whatWasClicked, sum){
     }
     else {  //if the leesmeer was clicked at the box itself expand immediately
       if ($("#"+whatWasClicked).find(".hidden").css('max-height') == '140px'){   //if box is contracted
-        expanded.push(whatWasClicked);
+        ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
 
         $("#"+whatWasClicked).find(".hidden").css({'max-height': '800px', transition: 'max-height 1s ease-in'}); //expand smoothly
         $("#"+whatWasClicked).find('.leesmeer').html("&#9195; Lees minder &#9195;");   //change text
@@ -77,9 +77,6 @@ function expand(whatWasClicked, sum){
       $("#"+whatWasClicked).find(".hidden").css({'max-height': '140px', transition: 'max-height 0.4s ease-out', overflow: 'hidden'});
       $("#"+whatWasClicked).find('.leesmeer').html("&#9196; Lees meer &#9196;");
 
-      var index = expanded.indexOf(whatWasClicked);
-      expanded.splice(index, 1);    // remove divid from array
-
       elementWidth = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").width()/1.5;
       elementHeight = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").height()/1.5;
       $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").animate({width: elementWidth, height: elementHeight}, 300);
@@ -92,14 +89,11 @@ function expand(whatWasClicked, sum){
 if (active_Menu_Item()=="portfolio"){
 
   if (sum==500 || sum == 1000 || sum == 1300){ // if the div was clicked in the summary or other page wait untill scolled to anchor until expanding
-    expanded.push(whatWasClicked);
       $("#"+whatWasClicked).find(".hidden2").delay(sum).queue(function (next) {
           $(this).css({'max-height': '2200px', transition: 'max-height 1s ease-in'});
           //smoothly resize image only if box is contracted
-          if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '140px'){   //if box is contracted
-              var elementWidth = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").width()*1.5; // multiply image width by 1.5
-              var elementHeight = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").height()*1.5;
-              $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").animate({width: elementWidth, height: elementHeight}, 500); //resize picture with new values
+          if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
+            ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
             }
           next();
         });
@@ -109,7 +103,7 @@ if (active_Menu_Item()=="portfolio"){
   }
   else {  //if the leesmeer was clicked at the box itself expand immediately
   if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
-    expanded.push(whatWasClicked);  // push divid in array (keeping track of what is expanded)
+    ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
 
     $("#"+whatWasClicked).find(".hidden2").css({'max-height': '2200px', transition: 'max-height 1s ease-in'}); //expand smoothly
     $("#"+whatWasClicked).find('.leesmeer').html('&#9195; Lees minder &#9195');   //change text
@@ -118,8 +112,7 @@ if (active_Menu_Item()=="portfolio"){
 else {  // if box is expanded do the opposite
   $("#"+whatWasClicked).find(".hidden2").css({'max-height': '240px', transition: 'max-height 0.7s ease-out', overflow: 'hidden'});
   $("#"+whatWasClicked).find('.leesmeer').html("&#9196; Lees meer &#9196;");
-  var index = expanded.indexOf(whatWasClicked);
-  expanded.splice(index, 1);    // remove divid from array
+
 }
 }
 } //END portfolio expand actions
@@ -127,7 +120,7 @@ else {  // if box is expanded do the opposite
 if (active_Menu_Item()!="diensten" && active_Menu_Item()!="portfolio"){
 
   if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
-    expanded.push(whatWasClicked);  // push divid in array (keeping track of what is expanded)
+    ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
 
     $("#"+whatWasClicked).find(".hidden2").css({'max-height': '1200px', transition: 'max-height 1s ease-in'}); //expand smoothly
     $("#"+whatWasClicked).find('.leesmeer').html('&#9195; Lees minder &#9195');   //change text
@@ -136,12 +129,10 @@ if (active_Menu_Item()!="diensten" && active_Menu_Item()!="portfolio"){
 else {  // if box is expanded do the opposite
   $("#"+whatWasClicked).find(".hidden2").css({'max-height': '240px', transition: 'max-height 0.7s ease-out', overflow: 'hidden'});
   $("#"+whatWasClicked).find('.leesmeer').html("&#9196; Lees meer &#9196;");
-  var index = expanded.indexOf(whatWasClicked);
-  expanded.splice(index, 1);    // remove divid from array
+
 }
 } //END index expand actions
 
-ga('send', 'event', 'expand', 'expandclicked', "id:"+whatWasClicked);
 };
 
 
