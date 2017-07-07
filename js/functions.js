@@ -49,7 +49,7 @@ function expand(whatWasClicked, sum){
             $(this).css({'max-height': '800px', transition: 'max-height 1s ease-in'});
             //smoothly resize image only if box is contracted
             if ($("#"+whatWasClicked).find(".hidden").css('max-height') == '140px'){   //if box is contracted
-              ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+              ga('send', 'event', 'expand', 'expandclicked', active_Menu_Item()+"-"+whatWasClicked);
 
                 var elementWidth = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").width()*1.5; // multiply image width by 1.5
                 var elementHeight = $("#"+whatWasClicked).find("#"+active_Menu_Item()+"img").height()*1.5;
@@ -63,7 +63,7 @@ function expand(whatWasClicked, sum){
     }
     else {  //if the leesmeer was clicked at the box itself expand immediately
       if ($("#"+whatWasClicked).find(".hidden").css('max-height') == '140px'){   //if box is contracted
-        ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+        ga('send', 'event', 'expand', 'expandclicked', active_Menu_Item()+"-"+whatWasClicked);
 
         $("#"+whatWasClicked).find(".hidden").css({'max-height': '800px', transition: 'max-height 1s ease-in'}); //expand smoothly
         $("#"+whatWasClicked).find('.leesmeer').html("&#9195; Lees minder &#9195;");   //change text
@@ -93,7 +93,7 @@ if (active_Menu_Item()=="portfolio"){
           $(this).css({'max-height': '2200px', transition: 'max-height 1s ease-in'});
           //smoothly resize image only if box is contracted
           if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
-            ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+            ga('send', 'event', 'expand', 'expandclicked', active_Menu_Item()+"-"+whatWasClicked);
             }
           next();
         });
@@ -103,7 +103,7 @@ if (active_Menu_Item()=="portfolio"){
   }
   else {  //if the leesmeer was clicked at the box itself expand immediately
   if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
-    ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+    ga('send', 'event', 'expand', 'expandclicked', active_Menu_Item()+"-"+whatWasClicked);
 
     $("#"+whatWasClicked).find(".hidden2").css({'max-height': '2200px', transition: 'max-height 1s ease-in'}); //expand smoothly
     $("#"+whatWasClicked).find('.leesmeer').html('&#9195; Lees minder &#9195');   //change text
