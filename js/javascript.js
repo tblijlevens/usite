@@ -77,7 +77,6 @@ else{
   };
   $("#totop").fadeOut(750);
 };
-//ga('send', 'event', 'scroll', 'scrolling', 'scrolls');  //google analytics detects scrolling
 
 };    // end scroll float function
 
