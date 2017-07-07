@@ -120,7 +120,7 @@ else {  // if box is expanded do the opposite
 if (active_Menu_Item()!="diensten" && active_Menu_Item()!="portfolio"){
 
   if ($("#"+whatWasClicked).find(".hidden2").css('max-height') == '240px'){   //if box is contracted
-    ga('send', 'event', 'expand', 'expandclicked', whatWasClicked);
+    ga('send', 'event', 'expand', 'expandclicked', active_Menu_Item()+"-"+whatWasClicked);
 
     $("#"+whatWasClicked).find(".hidden2").css({'max-height': '1200px', transition: 'max-height 1s ease-in'}); //expand smoothly
     $("#"+whatWasClicked).find('.leesmeer').html('&#9195; Lees minder &#9195');   //change text
